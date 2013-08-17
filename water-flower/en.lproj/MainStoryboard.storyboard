@@ -109,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New" id="sWs-ON-Msb"/>
+                    <tabBarItem key="tabBarItem" title="New" image="first" id="sWs-ON-Msb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFh-BT-ic2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
