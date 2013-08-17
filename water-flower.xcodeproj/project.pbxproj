@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50246C2D17BFCB9E00F2299B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C2C17BFCB9E00F2299B /* UIKit.framework */; };
+		50246C2F17BFCB9E00F2299B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C2E17BFCB9E00F2299B /* Foundation.framework */; };
+		50246C3117BFCB9E00F2299B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C3017BFCB9E00F2299B /* CoreGraphics.framework */; };
+		50246C3717BFCB9E00F2299B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50246C3517BFCB9E00F2299B /* InfoPlist.strings */; };
+		50246C3917BFCB9E00F2299B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50246C3817BFCB9E00F2299B /* main.m */; };
+		50246C3D17BFCB9E00F2299B /* ss_trialAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50246C3C17BFCB9E00F2299B /* ss_trialAppDelegate.m */; };
+		50246C3F17BFCB9E00F2299B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C3E17BFCB9E00F2299B /* Default.png */; };
+		50246C4117BFCB9E00F2299B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C4017BFCB9E00F2299B /* Default@2x.png */; };
+		50246C4317BFCB9E00F2299B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C4217BFCB9E00F2299B /* Default-568h@2x.png */; };
+		50246C4617BFCB9E00F2299B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50246C4417BFCB9E00F2299B /* MainStoryboard.storyboard */; };
+		50246C4917BFCB9E00F2299B /* ss_trialFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50246C4817BFCB9E00F2299B /* ss_trialFirstViewController.m */; };
+		50246C4B17BFCB9E00F2299B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C4A17BFCB9E00F2299B /* first.png */; };
+		50246C4D17BFCB9E00F2299B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C4C17BFCB9E00F2299B /* first@2x.png */; };
+		50246C5017BFCB9E00F2299B /* ss_trialSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50246C4F17BFCB9E00F2299B /* ss_trialSecondViewController.m */; };
+		50246C5217BFCB9E00F2299B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C5117BFCB9E00F2299B /* second.png */; };
+		50246C5417BFCB9E00F2299B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C5317BFCB9E00F2299B /* second@2x.png */; };
+		50246C5C17BFCB9E00F2299B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C5B17BFCB9E00F2299B /* SenTestingKit.framework */; };
+		50246C5D17BFCB9E00F2299B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C2C17BFCB9E00F2299B /* UIKit.framework */; };
+		50246C5E17BFCB9E00F2299B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C2E17BFCB9E00F2299B /* Foundation.framework */; };
+		50246C6617BFCB9E00F2299B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50246C6417BFCB9E00F2299B /* InfoPlist.strings */; };
+		50246C6917BFCB9E00F2299B /* water_flowerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50246C6817BFCB9E00F2299B /* water_flowerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50246C5F17BFCB9E00F2299B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50246C2117BFCB9E00F2299B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50246C2817BFCB9E00F2299B;
+			remoteInfo = "water-flower";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		50246C2917BFCB9E00F2299B /* water-flower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "water-flower.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50246C2C17BFCB9E00F2299B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		50246C2E17BFCB9E00F2299B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		50246C3017BFCB9E00F2299B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		50246C3417BFCB9E00F2299B /* water-flower-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "water-flower-Info.plist"; sourceTree = "<group>"; };
+		50246C3617BFCB9E00F2299B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50246C3817BFCB9E00F2299B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50246C3A17BFCB9E00F2299B /* water-flower-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "water-flower-Prefix.pch"; sourceTree = "<group>"; };
+		50246C3B17BFCB9E00F2299B /* ss_trialAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ss_trialAppDelegate.h; sourceTree = "<group>"; };
+		50246C3C17BFCB9E00F2299B /* ss_trialAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ss_trialAppDelegate.m; sourceTree = "<group>"; };
+		50246C3E17BFCB9E00F2299B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		50246C4017BFCB9E00F2299B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		50246C4217BFCB9E00F2299B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		50246C4517BFCB9E00F2299B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		50246C4717BFCB9E00F2299B /* ss_trialFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ss_trialFirstViewController.h; sourceTree = "<group>"; };
+		50246C4817BFCB9E00F2299B /* ss_trialFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ss_trialFirstViewController.m; sourceTree = "<group>"; };
+		50246C4A17BFCB9E00F2299B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		50246C4C17BFCB9E00F2299B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		50246C4E17BFCB9E00F2299B /* ss_trialSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ss_trialSecondViewController.h; sourceTree = "<group>"; };
+		50246C4F17BFCB9E00F2299B /* ss_trialSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ss_trialSecondViewController.m; sourceTree = "<group>"; };
+		50246C5117BFCB9E00F2299B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		50246C5317BFCB9E00F2299B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		50246C5A17BFCB9E00F2299B /* water-flowerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "water-flowerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50246C5B17BFCB9E00F2299B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		50246C6317BFCB9E00F2299B /* water-flowerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "water-flowerTests-Info.plist"; sourceTree = "<group>"; };
+		50246C6517BFCB9E00F2299B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50246C6717BFCB9E00F2299B /* water_flowerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = water_flowerTests.h; sourceTree = "<group>"; };
+		50246C6817BFCB9E00F2299B /* water_flowerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = water_flowerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50246C2617BFCB9E00F2299B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50246C2D17BFCB9E00F2299B /* UIKit.framework in Frameworks */,
+				50246C2F17BFCB9E00F2299B /* Foundation.framework in Frameworks */,
+				50246C3117BFCB9E00F2299B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50246C5617BFCB9E00F2299B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50246C5C17BFCB9E00F2299B /* SenTestingKit.framework in Frameworks */,
+				50246C5D17BFCB9E00F2299B /* UIKit.framework in Frameworks */,
+				50246C5E17BFCB9E00F2299B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50246C2017BFCB9E00F2299B = {
+			isa = PBXGroup;
+			children = (
+				50246C3217BFCB9E00F2299B /* water-flower */,
+				50246C6117BFCB9E00F2299B /* water-flowerTests */,
+				50246C2B17BFCB9E00F2299B /* Frameworks */,
+				50246C2A17BFCB9E00F2299B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50246C2A17BFCB9E00F2299B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50246C2917BFCB9E00F2299B /* water-flower.app */,
+				50246C5A17BFCB9E00F2299B /* water-flowerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50246C2B17BFCB9E00F2299B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50246C2C17BFCB9E00F2299B /* UIKit.framework */,
+				50246C2E17BFCB9E00F2299B /* Foundation.framework */,
+				50246C3017BFCB9E00F2299B /* CoreGraphics.framework */,
+				50246C5B17BFCB9E00F2299B /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50246C3217BFCB9E00F2299B /* water-flower */ = {
+			isa = PBXGroup;
+			children = (
+				50246C3B17BFCB9E00F2299B /* ss_trialAppDelegate.h */,
+				50246C3C17BFCB9E00F2299B /* ss_trialAppDelegate.m */,
+				50246C4417BFCB9E00F2299B /* MainStoryboard.storyboard */,
+				50246C4717BFCB9E00F2299B /* ss_trialFirstViewController.h */,
+				50246C4817BFCB9E00F2299B /* ss_trialFirstViewController.m */,
+				50246C4A17BFCB9E00F2299B /* first.png */,
+				50246C4C17BFCB9E00F2299B /* first@2x.png */,
+				50246C4E17BFCB9E00F2299B /* ss_trialSecondViewController.h */,
+				50246C4F17BFCB9E00F2299B /* ss_trialSecondViewController.m */,
+				50246C5117BFCB9E00F2299B /* second.png */,
+				50246C5317BFCB9E00F2299B /* second@2x.png */,
+				50246C3317BFCB9E00F2299B /* Supporting Files */,
+			);
+			path = "water-flower";
+			sourceTree = "<group>";
+		};
+		50246C3317BFCB9E00F2299B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50246C3417BFCB9E00F2299B /* water-flower-Info.plist */,
+				50246C3517BFCB9E00F2299B /* InfoPlist.strings */,
+				50246C3817BFCB9E00F2299B /* main.m */,
+				50246C3A17BFCB9E00F2299B /* water-flower-Prefix.pch */,
+				50246C3E17BFCB9E00F2299B /* Default.png */,
+				50246C4017BFCB9E00F2299B /* Default@2x.png */,
+				50246C4217BFCB9E00F2299B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50246C6117BFCB9E00F2299B /* water-flowerTests */ = {
+			isa = PBXGroup;
+			children = (
+				50246C6717BFCB9E00F2299B /* water_flowerTests.h */,
+				50246C6817BFCB9E00F2299B /* water_flowerTests.m */,
+				50246C6217BFCB9E00F2299B /* Supporting Files */,
+			);
+			path = "water-flowerTests";
+			sourceTree = "<group>";
+		};
+		50246C6217BFCB9E00F2299B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50246C6317BFCB9E00F2299B /* water-flowerTests-Info.plist */,
+				50246C6417BFCB9E00F2299B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50246C2817BFCB9E00F2299B /* water-flower */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50246C6C17BFCB9E00F2299B /* Build configuration list for PBXNativeTarget "water-flower" */;
+			buildPhases = (
+				50246C2517BFCB9E00F2299B /* Sources */,
+				50246C2617BFCB9E00F2299B /* Frameworks */,
+				50246C2717BFCB9E00F2299B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "water-flower";
+			productName = "water-flower";
+			productReference = 50246C2917BFCB9E00F2299B /* water-flower.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50246C5917BFCB9E00F2299B /* water-flowerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50246C6F17BFCB9E00F2299B /* Build configuration list for PBXNativeTarget "water-flowerTests" */;
+			buildPhases = (
+				50246C5517BFCB9E00F2299B /* Sources */,
+				50246C5617BFCB9E00F2299B /* Frameworks */,
+				50246C5717BFCB9E00F2299B /* Resources */,
+				50246C5817BFCB9E00F2299B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50246C6017BFCB9E00F2299B /* PBXTargetDependency */,
+			);
+			name = "water-flowerTests";
+			productName = "water-flowerTests";
+			productReference = 50246C5A17BFCB9E00F2299B /* water-flowerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50246C2117BFCB9E00F2299B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ss.trial;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = ss;
+			};
+			buildConfigurationList = 50246C2417BFCB9E00F2299B /* Build configuration list for PBXProject "water-flower" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 50246C2017BFCB9E00F2299B;
+			productRefGroup = 50246C2A17BFCB9E00F2299B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50246C2817BFCB9E00F2299B /* water-flower */,
+				50246C5917BFCB9E00F2299B /* water-flowerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50246C2717BFCB9E00F2299B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50246C3717BFCB9E00F2299B /* InfoPlist.strings in Resources */,
+				50246C3F17BFCB9E00F2299B /* Default.png in Resources */,
+				50246C4117BFCB9E00F2299B /* Default@2x.png in Resources */,
+				50246C4317BFCB9E00F2299B /* Default-568h@2x.png in Resources */,
+				50246C4617BFCB9E00F2299B /* MainStoryboard.storyboard in Resources */,
+				50246C4B17BFCB9E00F2299B /* first.png in Resources */,
+				50246C4D17BFCB9E00F2299B /* first@2x.png in Resources */,
+				50246C5217BFCB9E00F2299B /* second.png in Resources */,
+				50246C5417BFCB9E00F2299B /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50246C5717BFCB9E00F2299B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50246C6617BFCB9E00F2299B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50246C5817BFCB9E00F2299B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50246C2517BFCB9E00F2299B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50246C3917BFCB9E00F2299B /* main.m in Sources */,
+				50246C3D17BFCB9E00F2299B /* ss_trialAppDelegate.m in Sources */,
+				50246C4917BFCB9E00F2299B /* ss_trialFirstViewController.m in Sources */,
+				50246C5017BFCB9E00F2299B /* ss_trialSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50246C5517BFCB9E00F2299B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50246C6917BFCB9E00F2299B /* water_flowerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50246C6017BFCB9E00F2299B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50246C2817BFCB9E00F2299B /* water-flower */;
+			targetProxy = 50246C5F17BFCB9E00F2299B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50246C3517BFCB9E00F2299B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50246C3617BFCB9E00F2299B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		50246C4417BFCB9E00F2299B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50246C4517BFCB9E00F2299B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		50246C6417BFCB9E00F2299B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50246C6517BFCB9E00F2299B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50246C6A17BFCB9E00F2299B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50246C6B17BFCB9E00F2299B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50246C6D17BFCB9E00F2299B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "water-flower/water-flower-Prefix.pch";
+				INFOPLIST_FILE = "water-flower/water-flower-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		50246C6E17BFCB9E00F2299B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "water-flower/water-flower-Prefix.pch";
+				INFOPLIST_FILE = "water-flower/water-flower-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		50246C7017BFCB9E00F2299B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/water-flower.app/water-flower";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "water-flower/water-flower-Prefix.pch";
+				INFOPLIST_FILE = "water-flowerTests/water-flowerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		50246C7117BFCB9E00F2299B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/water-flower.app/water-flower";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "water-flower/water-flower-Prefix.pch";
+				INFOPLIST_FILE = "water-flowerTests/water-flowerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50246C2417BFCB9E00F2299B /* Build configuration list for PBXProject "water-flower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50246C6A17BFCB9E00F2299B /* Debug */,
+				50246C6B17BFCB9E00F2299B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50246C6C17BFCB9E00F2299B /* Build configuration list for PBXNativeTarget "water-flower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50246C6D17BFCB9E00F2299B /* Debug */,
+				50246C6E17BFCB9E00F2299B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		50246C6F17BFCB9E00F2299B /* Build configuration list for PBXNativeTarget "water-flowerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50246C7017BFCB9E00F2299B /* Debug */,
+				50246C7117BFCB9E00F2299B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50246C2117BFCB9E00F2299B /* Project object */;
+}
