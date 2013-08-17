@@ -28,6 +28,7 @@
 		50246C5E17BFCB9E00F2299B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C2E17BFCB9E00F2299B /* Foundation.framework */; };
 		50246C6617BFCB9E00F2299B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50246C6417BFCB9E00F2299B /* InfoPlist.strings */; };
 		50246C6917BFCB9E00F2299B /* water_flowerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50246C6817BFCB9E00F2299B /* water_flowerTests.m */; };
+		50246C7A17BFD21700F2299B /* ss_trialThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50246C7917BFD21700F2299B /* ss_trialThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		50246C6517BFCB9E00F2299B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		50246C6717BFCB9E00F2299B /* water_flowerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = water_flowerTests.h; sourceTree = "<group>"; };
 		50246C6817BFCB9E00F2299B /* water_flowerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = water_flowerTests.m; sourceTree = "<group>"; };
+		50246C7817BFD21700F2299B /* ss_trialThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ss_trialThirdViewController.h; sourceTree = "<group>"; };
+		50246C7917BFD21700F2299B /* ss_trialThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ss_trialThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				50246C5117BFCB9E00F2299B /* second.png */,
 				50246C5317BFCB9E00F2299B /* second@2x.png */,
 				50246C3317BFCB9E00F2299B /* Supporting Files */,
+				50246C7817BFD21700F2299B /* ss_trialThirdViewController.h */,
+				50246C7917BFD21700F2299B /* ss_trialThirdViewController.m */,
 			);
 			path = "water-flower";
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				50246C3D17BFCB9E00F2299B /* ss_trialAppDelegate.m in Sources */,
 				50246C4917BFCB9E00F2299B /* ss_trialFirstViewController.m in Sources */,
 				50246C5017BFCB9E00F2299B /* ss_trialSecondViewController.m in Sources */,
+				50246C7A17BFD21700F2299B /* ss_trialThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
