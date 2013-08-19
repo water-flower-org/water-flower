@@ -100,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--Ss trial Third View Controller - New-->
+        <!--Ss trial Third View Controller - third-->
         <scene sceneID="dCd-YR-X5Y">
             <objects>
                 <viewController id="7xV-Sb-Unc" customClass="ss_trialThirdViewController" sceneMemberID="viewController">
@@ -109,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New" image="first" id="sWs-ON-Msb"/>
+                    <tabBarItem key="tabBarItem" title="third" image="first" id="sWs-ON-Msb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFh-BT-ic2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
