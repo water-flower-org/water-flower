@@ -17,18 +17,16 @@
 		50246C4117BFCB9E00F2299B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C4017BFCB9E00F2299B /* Default@2x.png */; };
 		50246C4317BFCB9E00F2299B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C4217BFCB9E00F2299B /* Default-568h@2x.png */; };
 		50246C4617BFCB9E00F2299B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50246C4417BFCB9E00F2299B /* MainStoryboard.storyboard */; };
-		50246C4917BFCB9E00F2299B /* ss_trialFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50246C4817BFCB9E00F2299B /* ss_trialFirstViewController.m */; };
-		50246C4B17BFCB9E00F2299B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C4A17BFCB9E00F2299B /* first.png */; };
-		50246C4D17BFCB9E00F2299B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C4C17BFCB9E00F2299B /* first@2x.png */; };
-		50246C5017BFCB9E00F2299B /* ss_trialSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50246C4F17BFCB9E00F2299B /* ss_trialSecondViewController.m */; };
-		50246C5217BFCB9E00F2299B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C5117BFCB9E00F2299B /* second.png */; };
-		50246C5417BFCB9E00F2299B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50246C5317BFCB9E00F2299B /* second@2x.png */; };
 		50246C5C17BFCB9E00F2299B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C5B17BFCB9E00F2299B /* SenTestingKit.framework */; };
 		50246C5D17BFCB9E00F2299B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C2C17BFCB9E00F2299B /* UIKit.framework */; };
 		50246C5E17BFCB9E00F2299B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50246C2E17BFCB9E00F2299B /* Foundation.framework */; };
 		50246C6617BFCB9E00F2299B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50246C6417BFCB9E00F2299B /* InfoPlist.strings */; };
 		50246C6917BFCB9E00F2299B /* water_flowerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50246C6817BFCB9E00F2299B /* water_flowerTests.m */; };
-		50246C7A17BFD21700F2299B /* ss_trialThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50246C7917BFD21700F2299B /* ss_trialThirdViewController.m */; };
+		5077345417CA381D009CFECF /* CascadeTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5077345317CA381D009CFECF /* CascadeTableController.m */; };
+		5077345717CA3C4C009CFECF /* TableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5077345617CA3C4C009CFECF /* TableDataSource.m */; };
+		5077345A17CA3F52009CFECF /* TableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5077345917CA3F52009CFECF /* TableData.m */; };
+		5077345D17CC7B00009CFECF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5077345C17CC7B00009CFECF /* DetailViewController.m */; };
+		508F321717CF9E4D0094FDDD /* RealCascadeTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508F321617CF9E4D0094FDDD /* RealCascadeTableController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,22 +54,24 @@
 		50246C4017BFCB9E00F2299B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		50246C4217BFCB9E00F2299B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		50246C4517BFCB9E00F2299B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		50246C4717BFCB9E00F2299B /* ss_trialFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ss_trialFirstViewController.h; sourceTree = "<group>"; };
-		50246C4817BFCB9E00F2299B /* ss_trialFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ss_trialFirstViewController.m; sourceTree = "<group>"; };
-		50246C4A17BFCB9E00F2299B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		50246C4C17BFCB9E00F2299B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		50246C4E17BFCB9E00F2299B /* ss_trialSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ss_trialSecondViewController.h; sourceTree = "<group>"; };
-		50246C4F17BFCB9E00F2299B /* ss_trialSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ss_trialSecondViewController.m; sourceTree = "<group>"; };
-		50246C5117BFCB9E00F2299B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		50246C5317BFCB9E00F2299B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		50246C5A17BFCB9E00F2299B /* water-flowerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "water-flowerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50246C5B17BFCB9E00F2299B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		50246C6317BFCB9E00F2299B /* water-flowerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "water-flowerTests-Info.plist"; sourceTree = "<group>"; };
 		50246C6517BFCB9E00F2299B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		50246C6717BFCB9E00F2299B /* water_flowerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = water_flowerTests.h; sourceTree = "<group>"; };
 		50246C6817BFCB9E00F2299B /* water_flowerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = water_flowerTests.m; sourceTree = "<group>"; };
-		50246C7817BFD21700F2299B /* ss_trialThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ss_trialThirdViewController.h; sourceTree = "<group>"; };
-		50246C7917BFD21700F2299B /* ss_trialThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ss_trialThirdViewController.m; sourceTree = "<group>"; };
+		5077345217CA381D009CFECF /* CascadeTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CascadeTableController.h; sourceTree = "<group>"; };
+		5077345317CA381D009CFECF /* CascadeTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CascadeTableController.m; sourceTree = "<group>"; };
+		5077345517CA3C4C009CFECF /* TableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDataSource.h; sourceTree = "<group>"; };
+		5077345617CA3C4C009CFECF /* TableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDataSource.m; sourceTree = "<group>"; };
+		5077345817CA3F52009CFECF /* TableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableData.h; sourceTree = "<group>"; };
+		5077345917CA3F52009CFECF /* TableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableData.m; sourceTree = "<group>"; };
+		5077345B17CC7B00009CFECF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		5077345C17CC7B00009CFECF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		5077345E17CCE16D009CFECF /* UpdateDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateDataDelegate.h; sourceTree = "<group>"; };
+		5077346117CCE25C009CFECF /* GetDataDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetDataDelegate.h; sourceTree = "<group>"; };
+		508F321517CF9E4D0094FDDD /* RealCascadeTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealCascadeTableController.h; sourceTree = "<group>"; };
+		508F321617CF9E4D0094FDDD /* RealCascadeTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealCascadeTableController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,17 +134,19 @@
 				50246C3B17BFCB9E00F2299B /* ss_trialAppDelegate.h */,
 				50246C3C17BFCB9E00F2299B /* ss_trialAppDelegate.m */,
 				50246C4417BFCB9E00F2299B /* MainStoryboard.storyboard */,
-				50246C4717BFCB9E00F2299B /* ss_trialFirstViewController.h */,
-				50246C4817BFCB9E00F2299B /* ss_trialFirstViewController.m */,
-				50246C4A17BFCB9E00F2299B /* first.png */,
-				50246C4C17BFCB9E00F2299B /* first@2x.png */,
-				50246C4E17BFCB9E00F2299B /* ss_trialSecondViewController.h */,
-				50246C4F17BFCB9E00F2299B /* ss_trialSecondViewController.m */,
-				50246C5117BFCB9E00F2299B /* second.png */,
-				50246C5317BFCB9E00F2299B /* second@2x.png */,
 				50246C3317BFCB9E00F2299B /* Supporting Files */,
-				50246C7817BFD21700F2299B /* ss_trialThirdViewController.h */,
-				50246C7917BFD21700F2299B /* ss_trialThirdViewController.m */,
+				5077345217CA381D009CFECF /* CascadeTableController.h */,
+				5077345317CA381D009CFECF /* CascadeTableController.m */,
+				5077345517CA3C4C009CFECF /* TableDataSource.h */,
+				5077345617CA3C4C009CFECF /* TableDataSource.m */,
+				5077345817CA3F52009CFECF /* TableData.h */,
+				5077345917CA3F52009CFECF /* TableData.m */,
+				5077345B17CC7B00009CFECF /* DetailViewController.h */,
+				5077345C17CC7B00009CFECF /* DetailViewController.m */,
+				5077345E17CCE16D009CFECF /* UpdateDataDelegate.h */,
+				5077346117CCE25C009CFECF /* GetDataDelegate.h */,
+				508F321517CF9E4D0094FDDD /* RealCascadeTableController.h */,
+				508F321617CF9E4D0094FDDD /* RealCascadeTableController.m */,
 			);
 			path = "water-flower";
 			sourceTree = "<group>";
@@ -259,10 +261,6 @@
 				50246C4117BFCB9E00F2299B /* Default@2x.png in Resources */,
 				50246C4317BFCB9E00F2299B /* Default-568h@2x.png in Resources */,
 				50246C4617BFCB9E00F2299B /* MainStoryboard.storyboard in Resources */,
-				50246C4B17BFCB9E00F2299B /* first.png in Resources */,
-				50246C4D17BFCB9E00F2299B /* first@2x.png in Resources */,
-				50246C5217BFCB9E00F2299B /* second.png in Resources */,
-				50246C5417BFCB9E00F2299B /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,9 +297,11 @@
 			files = (
 				50246C3917BFCB9E00F2299B /* main.m in Sources */,
 				50246C3D17BFCB9E00F2299B /* ss_trialAppDelegate.m in Sources */,
-				50246C4917BFCB9E00F2299B /* ss_trialFirstViewController.m in Sources */,
-				50246C5017BFCB9E00F2299B /* ss_trialSecondViewController.m in Sources */,
-				50246C7A17BFD21700F2299B /* ss_trialThirdViewController.m in Sources */,
+				5077345417CA381D009CFECF /* CascadeTableController.m in Sources */,
+				5077345717CA3C4C009CFECF /* TableDataSource.m in Sources */,
+				5077345A17CA3F52009CFECF /* TableData.m in Sources */,
+				5077345D17CC7B00009CFECF /* DetailViewController.m in Sources */,
+				508F321717CF9E4D0094FDDD /* RealCascadeTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +482,7 @@
 				50246C6E17BFCB9E00F2299B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50246C6F17BFCB9E00F2299B /* Build configuration list for PBXNativeTarget "water-flowerTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +491,7 @@
 				50246C7117BFCB9E00F2299B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
