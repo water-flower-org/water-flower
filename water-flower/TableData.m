@@ -26,6 +26,15 @@
     return self;
 }
 
+- (void)update:(int)data {
+    self.data = data;
+    self.category = self.data % 2;
+}
+
+- (NSString *)getDesc {
+    return [NSString stringWithFormat:self.descFormat, self.category, self.data];
+}
+
 - (NSComparisonResult)compare:(TableData*)other {
     if (self.category < other.category) {
         return NSOrderedAscending;
@@ -46,13 +55,30 @@
     } else return NSOrderedDescending;
 }
 
-- (void)update:(int)data {
-    self.data = data;
-    self.category = self.data % 2;
+- (NSUInteger)hash;
+{
+    NSString *k = [NSString stringWithFormat:@"%@_%d_%d", @"TableData", self.category, self.data];
+    return [k hash];
 }
 
-- (NSString *)getDesc {
-    return [NSString stringWithFormat:self.descFormat, self.category, self.data];
+- (BOOL)isEqual:(id)other;
+{
+    if ( [other isKindOfClass:[TableData class]] ) {
+        TableData * o = (TableData*)other;
+        return (self.data == o.data) && (self.category == o.category);
+    } else {
+        return NO;
+    }
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    TableData *objectCopy = [[TableData allocWithZone:zone] init];
+    // Copy over all instance variables from self to objectCopy.
+    // Use deep copies for all strong pointers, shallow copies for weak.
+    objectCopy.data = self.data;
+    objectCopy.category = self.category;
+    return objectCopy;
 }
 
 @end

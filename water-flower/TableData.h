@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TableData : NSObject {
+@interface TableData : NSObject <NSCopying> {
 
 }
 

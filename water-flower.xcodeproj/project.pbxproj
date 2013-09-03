@@ -27,6 +27,8 @@
 		5077345A17CA3F52009CFECF /* TableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5077345917CA3F52009CFECF /* TableData.m */; };
 		5077345D17CC7B00009CFECF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5077345C17CC7B00009CFECF /* DetailViewController.m */; };
 		508F321717CF9E4D0094FDDD /* RealCascadeTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508F321617CF9E4D0094FDDD /* RealCascadeTableController.m */; };
+		50E5572917D4E79E008D8BD5 /* Cell2DataMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E5572817D4E79E008D8BD5 /* Cell2DataMap.m */; };
+		50E7A74E17D65FD1003A4E26 /* AddDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E7A74D17D65FD1003A4E26 /* AddDataViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,12 @@
 		5077346117CCE25C009CFECF /* GetDataDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetDataDelegate.h; sourceTree = "<group>"; };
 		508F321517CF9E4D0094FDDD /* RealCascadeTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealCascadeTableController.h; sourceTree = "<group>"; };
 		508F321617CF9E4D0094FDDD /* RealCascadeTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealCascadeTableController.m; sourceTree = "<group>"; };
+		50E5572717D4E79E008D8BD5 /* Cell2DataMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell2DataMap.h; sourceTree = "<group>"; };
+		50E5572817D4E79E008D8BD5 /* Cell2DataMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell2DataMap.m; sourceTree = "<group>"; };
+		50E7A74C17D65FD1003A4E26 /* AddDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDataViewController.h; sourceTree = "<group>"; };
+		50E7A74D17D65FD1003A4E26 /* AddDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDataViewController.m; sourceTree = "<group>"; };
+		50E7A74F17D6651C003A4E26 /* AddDataDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddDataDelegate.h; sourceTree = "<group>"; };
+		50E7A75017D66D1F003A4E26 /* ReloadDataDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReloadDataDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,16 +142,22 @@
 				50246C3B17BFCB9E00F2299B /* ss_trialAppDelegate.h */,
 				50246C3C17BFCB9E00F2299B /* ss_trialAppDelegate.m */,
 				50246C4417BFCB9E00F2299B /* MainStoryboard.storyboard */,
+				50E7A74C17D65FD1003A4E26 /* AddDataViewController.h */,
+				50E7A74D17D65FD1003A4E26 /* AddDataViewController.m */,
 				50246C3317BFCB9E00F2299B /* Supporting Files */,
 				5077345217CA381D009CFECF /* CascadeTableController.h */,
 				5077345317CA381D009CFECF /* CascadeTableController.m */,
+				50E7A75017D66D1F003A4E26 /* ReloadDataDelegate.h */,
 				5077345517CA3C4C009CFECF /* TableDataSource.h */,
 				5077345617CA3C4C009CFECF /* TableDataSource.m */,
 				5077345817CA3F52009CFECF /* TableData.h */,
 				5077345917CA3F52009CFECF /* TableData.m */,
+				50E5572717D4E79E008D8BD5 /* Cell2DataMap.h */,
+				50E5572817D4E79E008D8BD5 /* Cell2DataMap.m */,
 				5077345B17CC7B00009CFECF /* DetailViewController.h */,
 				5077345C17CC7B00009CFECF /* DetailViewController.m */,
 				5077345E17CCE16D009CFECF /* UpdateDataDelegate.h */,
+				50E7A74F17D6651C003A4E26 /* AddDataDelegate.h */,
 				5077346117CCE25C009CFECF /* GetDataDelegate.h */,
 				508F321517CF9E4D0094FDDD /* RealCascadeTableController.h */,
 				508F321617CF9E4D0094FDDD /* RealCascadeTableController.m */,
@@ -302,6 +316,8 @@
 				5077345A17CA3F52009CFECF /* TableData.m in Sources */,
 				5077345D17CC7B00009CFECF /* DetailViewController.m in Sources */,
 				508F321717CF9E4D0094FDDD /* RealCascadeTableController.m in Sources */,
+				50E5572917D4E79E008D8BD5 /* Cell2DataMap.m in Sources */,
+				50E7A74E17D65FD1003A4E26 /* AddDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

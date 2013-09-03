@@ -41,14 +41,16 @@
 }
 
 - (void)removeDataAtIndex:(int)index {
-    NSLog(@"remove at %d", index);
     TableData * t = [self getDataAtIndex:index];
     [m_data removeObject:t];
 }
 
 - (NSArray *) getAllCategories {
     // what we can get are just 0 and 1
-    return [[NSArray alloc] initWithObjects:0, 1, nil];
+    NSMutableArray * ret = [[NSMutableArray alloc] init];
+    [ret addObject:[NSNumber numberWithInt:0]];
+    [ret addObject:[NSNumber numberWithInt:1]];
+    return ret;
 }
 
 - (NSArray *) getAllItemsForCategory:(int)category {
@@ -71,7 +73,7 @@
     int maxInd = (maxData) ? maxData.data : 0;
     
     for ( int i = 0; i < count; ++i ) {
-        TableData * n = [[TableData alloc] initWithData:(maxInd + i + 1)];
+        TableData * n = [[TableData alloc] initWithData:(maxInd + (i + 1) * 2)];
         [ret addObject:n];
     }
     

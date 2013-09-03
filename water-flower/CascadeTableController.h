@@ -10,8 +10,9 @@
 #import "TableDataSource.h"
 #import "GetDataDelegate.h"
 #import "UpdateDataDelegate.h"
+#import "ReloadDataDelegate.h"
 
-@interface CascadeTableController : UITableViewController <GetDataDelegate, UpdateDataDelegate> {
+@interface CascadeTableController : UITableViewController <GetDataDelegate, UpdateDataDelegate, ReloadDataDelegate> {
 }
 
 @property (weak, nonatomic) TableDataSource *ds;

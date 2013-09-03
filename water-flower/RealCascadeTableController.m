@@ -7,6 +7,7 @@
 //
 
 #import "RealCascadeTableController.h"
+#import "AddDataViewController.h"
 
 @interface RealCascadeTableController ()
 
@@ -19,6 +20,18 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+    }
+    return self;
+}
+
+// walkaround as initwithstyle not called
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder: aDecoder];
+    if (self)
+    {
+        self.ds = [TableDataSource getInstance];
+        self.cell2data = [[Cell2DataMap alloc]initWithCategories: [self.ds getAllCategories]];
     }
     return self;
 }
@@ -42,6 +55,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (int)getDataForCurrentIndex {
+    int row = [self.tableView indexPathForSelectedRow].row;
+    TableData * t = [self.cell2data dataAtIndexPath:[NSIndexPath indexPathForRow:row inSection:0]];
+    return t.data;
+}
+
+- (void)addData:(int)data {
+    [self.ds createDataWith:data];
+    [self.ds sortDataOnly];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -51,17 +75,46 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    NSInteger ret = [self.cell2data totalRows];
+    NSLog(@"numberOfRows: %d", ret);
+    return ret;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"CategoryCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSLog(@"asking for cell at %d", indexPath.row);
     
-    // Configure the cell...
+    if ( [self.cell2data indexPathIsMaster:indexPath] ) { 
+        NSString *CellIdentifier = @"CategoryCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        cell.textLabel.text = [NSString stringWithFormat:@"category %d", indexPath.row];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"category %d", indexPath.row];
+        
+        NSLog(@"return master for %d", indexPath.row);
+        return cell;
+    }
     
-    return cell;
+    if ( [self.cell2data indexPathIsDetail:indexPath] ) {
+        NSString *CellIdentifier = @"ItemCell";
+        TableData * t = [self.cell2data dataAtIndexPath:indexPath];
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        cell.textLabel.text = [NSString stringWithFormat:@"item %d", t.data];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"from category %d", t.category];
+        
+        NSLog(@"return detail for %d", indexPath.row);
+        return cell;
+    }
+    
+    return nil;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"SegueAdd"]) {
+        AddDataViewController *c = segue.destinationViewController;
+        c.dataDelegate = self;
+        c.reloadDelegate = self.reloadDelegate;
+    }
 }
 
 /*
@@ -114,6 +167,40 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    
+    NSLog(@"cell at %d selected", indexPath.row);
+    
+    int category = [self.cell2data categoryAtIndexPath:indexPath];
+    if ( category != -1 ) {
+        NSArray * items = [self.ds proposeItemsToAddForCategory:category withCount:(5 + category)];
+        NSMutableArray * newRows;
+        
+        for ( int i = 0; i < items.count; ++i ) {
+            TableData * t = [items objectAtIndex:i];
+            int currentRow = [self.cell2data indexForData:t];
+            if ( currentRow != -1 ) {
+                NSIndexPath * currentPath = [NSIndexPath indexPathForRow:currentRow inSection:0];
+                [self.cell2data rmData:t forCategory:category atIndex:currentPath];
+                [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:currentPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            } else {
+                int newRow = indexPath.row + 1 + i;
+                NSIndexPath * newPath = [NSIndexPath indexPathForRow:newRow inSection:0];
+                if ( !newRows ) {
+                    newRows = [[NSMutableArray alloc]init];
+                }
+                [newRows addObject:newPath];
+                
+                int internalRow = indexPath.row + i;
+                NSIndexPath * internalPath = [NSIndexPath indexPathForRow:internalRow inSection:0];
+                [self.cell2data addData:t forCategory:category afterIndex:internalPath];
+                
+            }
+        }
+        
+        if ( newRows ) { 
+            [self.tableView insertRowsAtIndexPaths:newRows withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+    }
 }
 
 @end

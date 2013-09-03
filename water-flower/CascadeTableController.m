@@ -8,6 +8,7 @@
 
 #import "CascadeTableController.h"
 #import "DetailViewController.h"
+#import "RealCascadeTableController.h"
 
 @interface CascadeTableController ()
 
@@ -62,6 +63,12 @@
     if ([segue.identifier isEqualToString:@"SegueMaster2Detail"]) {
         DetailViewController *c = segue.destinationViewController;
         c.dataDelegate = self;
+        return;
+    }
+    if ([segue.identifier isEqualToString:@"SegueAdd"]) {
+        RealCascadeTableController *c = segue.destinationViewController;
+        c.reloadDelegate = self;
+        return;
     }
 }
 
@@ -83,6 +90,10 @@
     int row = [self.tableView indexPathForSelectedRow].row;
     [self.ds removeDataAtIndex:row];
     [self.ds sortDataOnly];
+    [self.tableView reloadData];
+}
+
+- (void)reloadData {
     [self.tableView reloadData];
 }
 
