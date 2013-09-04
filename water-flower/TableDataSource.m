@@ -70,8 +70,7 @@
     NSArray * t = [self getAllItemsForCategory:category];
     TableData * maxData = [t lastObject];
     
-    int maxInd = (maxData) ? maxData.data : 0;
-    
+    int maxInd = (maxData)? maxData.data : (category - 2);
     for ( int i = 0; i < count; ++i ) {
         TableData * n = [[TableData alloc] initWithData:(maxInd + (i + 1) * 2)];
         [ret addObject:n];
