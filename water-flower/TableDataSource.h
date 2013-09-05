@@ -10,8 +10,10 @@
 #import "TableData.h"
 
 @interface TableDataSource : NSObject {
-    NSMutableArray * m_data;
 }
+
+@property NSString * saveFilePath;
+@property NSMutableArray * m_data;
 
 - (NSArray *) getAll;
 - (TableData *) createDataWith:(int)data;
@@ -22,6 +24,7 @@
 - (NSArray *) getAllCategories;
 - (NSArray *) getAllItemsForCategory:(int)category;
 - (NSArray *) proposeItemsToAddForCategory:(int)category withCount:(int)count;
+- (BOOL)save;
 
 + (TableDataSource *) getInstance;
 

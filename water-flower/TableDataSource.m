@@ -13,36 +13,55 @@
 - (id) init {
     self = [super init];
     if ( self ) {
-        m_data = [[NSMutableArray alloc] init];
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        self.saveFilePath = @"store.plist";
+        NSData *data = [userDefaults objectForKey:self.saveFilePath];
+        self.m_data = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        if ( !self.m_data ) {
+            NSLog(@"creating new data");
+            self.m_data = [[NSMutableArray alloc] init];
+        } else {
+            NSLog(@"loaded data");
+            [self sortDataOnly];
+        }
+        /*NSFileManager *fileManager = [NSFileManager defaultManager];
+        if ( [fileManager fileExistsAtPath:self.saveFilePath] ) {
+            NSLog(@"reading from file");
+            self.m_data = [[NSMutableArray alloc] initWithContentsOfFile:self.saveFilePath];
+            [self sortDataOnly];
+        } else {
+            NSLog(@"creating new data");
+            self.m_data = [[NSMutableArray alloc] init];
+        }*/
     }
     return self;
 }
 
 - (NSArray *) getAll {
-    return m_data;
+    return self.m_data;
 }
 
 - (TableData *) getDataAtIndex:(int)index {
-    return [m_data objectAtIndex:index];
+    return [self.m_data objectAtIndex:index];
 }
 
 - (TableData *) createDataWith:(int)data {
     TableData * t = [[TableData alloc] initWithData:data];
-    [m_data addObject:t];
+    [self.m_data addObject:t];
     return t;
 }
 
 - (void)sort {
-    [m_data sortUsingSelector:@selector(compare:)];
+    [self.m_data sortUsingSelector:@selector(compare:)];
 }
 
 - (void)sortDataOnly {
-    [m_data sortUsingSelector:@selector(compareDataOnly:)];
+    [self.m_data sortUsingSelector:@selector(compareDataOnly:)];
 }
 
 - (void)removeDataAtIndex:(int)index {
     TableData * t = [self getDataAtIndex:index];
-    [m_data removeObject:t];
+    [self.m_data removeObject:t];
 }
 
 - (NSArray *) getAllCategories {
@@ -55,8 +74,8 @@
 
 - (NSArray *) getAllItemsForCategory:(int)category {
     NSMutableArray *ret = [[NSMutableArray alloc] init];
-    for ( int i = 0; i < [m_data count]; ++i ) {
-        TableData * t = [m_data objectAtIndex:i];
+    for ( int i = 0; i < [self.m_data count]; ++i ) {
+        TableData * t = [self.m_data objectAtIndex:i];
         if ( t.category == category ) {
             [ret addObject:t];
         }
@@ -78,6 +97,13 @@
     
     return ret;
     
+}
+
+- (BOOL) save {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.m_data];
+    [userDefaults setObject:data forKey:self.saveFilePath];
+    return YES;
 }
 
 + (TableDataSource *) getInstance {

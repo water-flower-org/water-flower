@@ -81,4 +81,20 @@
     return objectCopy;
 }
 
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:[NSNumber numberWithInt:self.data] forKey:@"data"];
+    [encoder encodeObject:[NSNumber numberWithInt:self.category] forKey:@"category"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if((self = [super init])) {
+        NSNumber* t = [decoder decodeObjectForKey:@"data"];
+        self.data = t.integerValue;
+        t = [decoder decodeObjectForKey:@"category"];
+        self.category = t.integerValue;
+        self.descFormat = @"category: %d, index: %d";
+    }
+    return self;
+}
+
 @end

@@ -32,10 +32,10 @@
     if (self)
     {
         self.ds = [TableDataSource getInstance];
-        for ( int i = 0; i < 5; ++i ) {
+        /*for ( int i = 0; i < 5; ++i ) {
             [self.ds createDataWith:i];
         }
-        [self.ds sortDataOnly];
+        [self.ds sortDataOnly];*/
     }
     return self;
 }
@@ -83,6 +83,7 @@
     TableData * t = [self.ds getDataAtIndex:row];
     [t update:data];
     [self.ds sortDataOnly];
+    [self.ds save];
     [self.tableView reloadData];
 }
 
@@ -90,6 +91,7 @@
     int row = [self.tableView indexPathForSelectedRow].row;
     [self.ds removeDataAtIndex:row];
     [self.ds sortDataOnly];
+    [self.ds save];
     [self.tableView reloadData];
 }
 

@@ -63,6 +63,7 @@
 
 - (void)addData:(int)data {
     [self.ds createDataWith:data];
+    [self.ds save];
     [self.ds sortDataOnly];
 }
 
@@ -82,8 +83,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"asking for cell at %d", indexPath.row);
-    
+
     if ( [self.cell2data indexPathIsMaster:indexPath] ) { 
         NSString *CellIdentifier = @"CategoryCell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
@@ -106,6 +106,7 @@
         return cell;
     }
     
+    NSLog(@"returning nil for %d", indexPath.row);
     return nil;
 }
 
