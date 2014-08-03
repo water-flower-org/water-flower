@@ -41,11 +41,11 @@
     return self.m_data;
 }
 
-- (TableData *) getDataAtIndex:(int)index {
+- (TableData *) getDataAtIndex:(NSInteger)index {
     return [self.m_data objectAtIndex:index];
 }
 
-- (TableData *) createDataWith:(int)data {
+- (TableData *) createDataWith:(NSInteger)data {
     TableData * t = [[TableData alloc] initWithData:data];
     [self.m_data addObject:t];
     return t;
@@ -59,7 +59,7 @@
     [self.m_data sortUsingSelector:@selector(compareDataOnly:)];
 }
 
-- (void)removeDataAtIndex:(int)index {
+- (void)removeDataAtIndex:(NSInteger)index {
     TableData * t = [self getDataAtIndex:index];
     [self.m_data removeObject:t];
 }
@@ -72,7 +72,7 @@
     return ret;
 }
 
-- (NSArray *) getAllItemsForCategory:(int)category {
+- (NSArray *) getAllItemsForCategory:(NSInteger)category {
     NSMutableArray *ret = [[NSMutableArray alloc] init];
     for ( int i = 0; i < [self.m_data count]; ++i ) {
         TableData * t = [self.m_data objectAtIndex:i];
@@ -83,13 +83,13 @@
     return ret;
 }
 
-- (NSArray *) proposeItemsToAddForCategory:(int)category withCount:(int)count {
+- (NSArray *) proposeItemsToAddForCategory:(NSInteger)category withCount:(NSInteger)count {
     
     NSMutableArray * ret = [[NSMutableArray alloc]init];
     NSArray * t = [self getAllItemsForCategory:category];
     TableData * maxData = [t lastObject];
     
-    int maxInd = (maxData)? maxData.data : (category - 2);
+    NSInteger maxInd = (maxData)? maxData.data : (category - 2);
     for ( int i = 0; i < count; ++i ) {
         TableData * n = [[TableData alloc] initWithData:(maxInd + (i + 1) * 2)];
         [ret addObject:n];

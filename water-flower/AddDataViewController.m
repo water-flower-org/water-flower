@@ -27,8 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    int d = [self.dataDelegate getDataForCurrentIndex];
-    self.textLabel.text = [NSString stringWithFormat:@"%d", d];
+    NSInteger d = [self.dataDelegate getDataForCurrentIndex];
+    self.textLabel.text = [NSString stringWithFormat:@"%ld", d];
 }
 
 - (void)didReceiveMemoryWarning

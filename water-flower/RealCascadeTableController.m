@@ -55,13 +55,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (int)getDataForCurrentIndex {
-    int row = [self.tableView indexPathForSelectedRow].row;
+- (NSInteger)getDataForCurrentIndex {
+    NSInteger row = [self.tableView indexPathForSelectedRow].row;
     TableData * t = [self.cell2data dataAtIndexPath:[NSIndexPath indexPathForRow:row inSection:0]];
     return t.data;
 }
 
-- (void)addData:(int)data {
+- (void)addData:(NSInteger)data {
     [self.ds createDataWith:data];
     [self.ds save];
     [self.ds sortDataOnly];
@@ -77,7 +77,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger ret = [self.cell2data totalRows];
-    NSLog(@"numberOfRows: %d", ret);
+    NSLog(@"numberOfRows: %ld", (long)ret);
     return ret;
 }
 
@@ -87,10 +87,10 @@
     if ( [self.cell2data indexPathIsMaster:indexPath] ) { 
         NSString *CellIdentifier = @"CategoryCell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-        cell.textLabel.text = [NSString stringWithFormat:@"category %d", indexPath.row];
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"category %d", indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"category %ld", (long)indexPath.row];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"category %ld", (long)indexPath.row];
         
-        NSLog(@"return master for %d", indexPath.row);
+        NSLog(@"return master for %ld", (long)indexPath.row);
         return cell;
     }
     
@@ -99,14 +99,14 @@
         TableData * t = [self.cell2data dataAtIndexPath:indexPath];
         
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-        cell.textLabel.text = [NSString stringWithFormat:@"item %d", t.data];
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"from category %d", t.category];
+        cell.textLabel.text = [NSString stringWithFormat:@"item %ld", t.data];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"from category %ld", t.category];
         
-        NSLog(@"return detail for %d", indexPath.row);
+        NSLog(@"return detail for %ld", (long)indexPath.row);
         return cell;
     }
     
-    NSLog(@"returning nil for %d", indexPath.row);
+    NSLog(@"returning nil for %ld", (long)indexPath.row);
     return nil;
 }
 
@@ -169,29 +169,29 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
     
-    NSLog(@"cell at %d selected", indexPath.row);
+    NSLog(@"cell at %ld selected", (long)indexPath.row);
     
-    int category = [self.cell2data categoryAtIndexPath:indexPath];
+    NSInteger category = [self.cell2data categoryAtIndexPath:indexPath];
     if ( category != -1 ) {
         NSArray * items = [self.ds proposeItemsToAddForCategory:category withCount:(5 + category)];
         NSMutableArray * newRows;
         
         for ( int i = 0; i < items.count; ++i ) {
             TableData * t = [items objectAtIndex:i];
-            int currentRow = [self.cell2data indexForData:t];
+            NSInteger currentRow = [self.cell2data indexForData:t];
             if ( currentRow != -1 ) {
                 NSIndexPath * currentPath = [NSIndexPath indexPathForRow:currentRow inSection:0];
                 [self.cell2data rmData:t forCategory:category atIndex:currentPath];
                 [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:currentPath] withRowAnimation:UITableViewRowAnimationAutomatic];
             } else {
-                int newRow = indexPath.row + 1 + i;
+                NSInteger newRow = indexPath.row + 1 + i;
                 NSIndexPath * newPath = [NSIndexPath indexPathForRow:newRow inSection:0];
                 if ( !newRows ) {
                     newRows = [[NSMutableArray alloc]init];
                 }
                 [newRows addObject:newPath];
                 
-                int internalRow = indexPath.row + i;
+                NSInteger internalRow = indexPath.row + i;
                 NSIndexPath * internalPath = [NSIndexPath indexPathForRow:internalRow inSection:0];
                 [self.cell2data addData:t forCategory:category afterIndex:internalPath];
                 

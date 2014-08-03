@@ -10,6 +10,6 @@
 
 @protocol AddDataDelegate <NSObject>
 
-- (void)addData:(int)data;
+- (void)addData:(NSInteger)data;
 
 @end

@@ -8,7 +8,7 @@
 
 @protocol UpdateDataDelegate
 
-- (void)setDataForCurrentIndex:(int)data;
+- (void)setDataForCurrentIndex:(NSInteger)data;
 - (void)delDataForCurrentIndex;
 
 @end

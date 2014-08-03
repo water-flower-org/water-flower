@@ -16,14 +16,14 @@
 @property NSMutableArray * m_data;
 
 - (NSArray *) getAll;
-- (TableData *) createDataWith:(int)data;
-- (TableData *) getDataAtIndex:(int)index;
+- (TableData *) createDataWith:(NSInteger)data;
+- (TableData *) getDataAtIndex:(NSInteger)index;
 - (void)sort;
 - (void)sortDataOnly;
-- (void)removeDataAtIndex:(int)index;
+- (void)removeDataAtIndex:(NSInteger)index;
 - (NSArray *) getAllCategories;
-- (NSArray *) getAllItemsForCategory:(int)category;
-- (NSArray *) proposeItemsToAddForCategory:(int)category withCount:(int)count;
+- (NSArray *) getAllItemsForCategory:(NSInteger)category;
+- (NSArray *) proposeItemsToAddForCategory:(NSInteger)category withCount:(NSInteger)count;
 - (BOOL)save;
 
 + (TableDataSource *) getInstance;

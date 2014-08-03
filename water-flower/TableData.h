@@ -12,13 +12,13 @@
 
 }
 
-@property int category;
-@property int data;
+@property NSInteger category;
+@property NSInteger data;
 @property (readonly) NSString *descFormat;
 
 - (NSString *)getDesc;
-- (id)initWithData:(int)data;
-- (void)update:(int)data;
+- (id)initWithData:(NSInteger)data;
+- (void)update:(NSInteger)data;
 - (NSComparisonResult)compare:(TableData*)other;
 - (NSComparisonResult)compareDataOnly:(TableData*)other;
 

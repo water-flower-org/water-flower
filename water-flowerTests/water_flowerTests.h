@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 ss. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface water_flowerTests : SenTestCase
+@interface water_flowerTests : XCTestCase
 
 @end

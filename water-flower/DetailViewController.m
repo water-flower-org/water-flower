@@ -28,8 +28,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    int d = [self.dataDelegate getDataForCurrentIndex];
-    self.textField.text = [NSString stringWithFormat:@"%d", d];
+    NSInteger d = [self.dataDelegate getDataForCurrentIndex];
+    self.textField.text = [NSString stringWithFormat:@"%ld", d];
     self.isRemoving = NO;
 }
 

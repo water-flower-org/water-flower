@@ -72,14 +72,14 @@
     }
 }
 
-- (int)getDataForCurrentIndex {
-    int row = [self.tableView indexPathForSelectedRow].row;
+- (NSInteger)getDataForCurrentIndex {
+    NSInteger row = [self.tableView indexPathForSelectedRow].row;
     TableData * t = [self.ds getDataAtIndex:row];
     return t.data;
 }
 
-- (void)setDataForCurrentIndex:(int)data {
-    int row = [self.tableView indexPathForSelectedRow].row;
+- (void)setDataForCurrentIndex:(NSInteger)data {
+    NSInteger row = [self.tableView indexPathForSelectedRow].row;
     TableData * t = [self.ds getDataAtIndex:row];
     [t update:data];
     [self.ds sortDataOnly];
@@ -88,7 +88,7 @@
 }
 
 - (void)delDataForCurrentIndex {
-    int row = [self.tableView indexPathForSelectedRow].row;
+    NSInteger row = [self.tableView indexPathForSelectedRow].row;
     [self.ds removeDataAtIndex:row];
     [self.ds sortDataOnly];
     [self.ds save];
@@ -118,7 +118,7 @@
     
     TableData * t = [self.ds getDataAtIndex:indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"item at index: %d", t.data];
+    cell.textLabel.text = [NSString stringWithFormat:@"item at index: %ld", (long)t.data];
     cell.detailTextLabel.text = [t getDesc];
 
     return cell;

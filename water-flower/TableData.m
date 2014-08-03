@@ -16,7 +16,7 @@
 
 @implementation TableData
 
-- (id) initWithData:(int)data {
+- (id) initWithData:(NSInteger)data {
     self.descFormat = @"category: %d, index: %d";
     self = [super init];
     if ( self ) {
@@ -26,7 +26,7 @@
     return self;
 }
 
-- (void)update:(int)data {
+- (void)update:(NSInteger)data {
     self.data = data;
     self.category = self.data % 2;
 }
@@ -57,7 +57,7 @@
 
 - (NSUInteger)hash;
 {
-    NSString *k = [NSString stringWithFormat:@"%@_%d_%d", @"TableData", self.category, self.data];
+    NSString *k = [NSString stringWithFormat:@"%@_%ld_%ld", @"TableData", self.category, self.data];
     return [k hash];
 }
 
@@ -82,16 +82,16 @@
 }
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
-    [encoder encodeObject:[NSNumber numberWithInt:self.data] forKey:@"data"];
-    [encoder encodeObject:[NSNumber numberWithInt:self.category] forKey:@"category"];
+    [encoder encodeObject:[NSNumber numberWithInteger:self.data] forKey:@"data"];
+    [encoder encodeObject:[NSNumber numberWithInteger:self.category] forKey:@"category"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
     if((self = [super init])) {
         NSNumber* t = [decoder decodeObjectForKey:@"data"];
-        self.data = t.integerValue;
+        self.data = t.intValue;
         t = [decoder decodeObjectForKey:@"category"];
-        self.category = t.integerValue;
+        self.category = t.intValue;
         self.descFormat = @"category: %d, index: %d";
     }
     return self;

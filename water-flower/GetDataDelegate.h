@@ -8,6 +8,6 @@
 
 @protocol GetDataDelegate <NSObject>
 
-- (int)getDataForCurrentIndex;
+- (NSInteger)getDataForCurrentIndex;
 
 @end

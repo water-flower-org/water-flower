@@ -48,20 +48,20 @@
     NSLog(@"category:");
     for ( NSNumber * n in self.cell2category ) {
         NSIndexPath * p = [self.cell2category objectForKey:n];
-        NSLog(@"category %d: %d", n.intValue, p.row);
+        NSLog(@"category %d: %ld", n.intValue, (long)p.row);
     }
     NSLog(@"data:");
     for ( TableData * t in self.cell2data ) {
         NSIndexPath * p = [self.cell2data objectForKey:t];
-        NSLog(@"category %d data %d: %d", t.category, t.data, p.row);
+        NSLog(@"category %ld data %ld: %ld", t.category, t.data, (long)p.row);
     }
 }
 
 - (void)setFor:(NSMutableDictionary *)dict After:(NSIndexPath *)indexPath withVal:(int)val {
-    int di = indexPath.row;
+    NSInteger di = indexPath.row;
     for ( id t in [dict allKeys] ) {
         NSIndexPath * tp = [dict objectForKey:t];
-        int ti = tp.row;
+        NSInteger ti = tp.row;
         if ( ti > di ) {
             NSIndexPath * tv = [NSIndexPath indexPathForRow:(ti + (val)) inSection:0];
             [dict setObject:tv forKey:t];
@@ -74,7 +74,7 @@
     [self setFor:self.cell2data After:indexPath withVal:val];
 }
 
-- (void)addData:(TableData *)data forCategory:(int)category afterIndex:(NSIndexPath*)indexPath {
+- (void)addData:(TableData *)data forCategory:(NSInteger)category afterIndex:(NSIndexPath*)indexPath {
     
     NSIndexPath * currentPath = [self.cell2data objectForKey:data];
     if ( currentPath ) {
@@ -88,7 +88,7 @@
 
 }
 
-- (void)rmData:(TableData*)data forCategory:(int)category atIndex:(NSIndexPath*)currentRow {
+- (void)rmData:(TableData*)data forCategory:(NSInteger)category atIndex:(NSIndexPath*)currentRow {
     NSIndexPath * currentPath = [self.cell2data objectForKey:data];
     if ( currentPath ) {
         [self.cell2data removeObjectForKey:data];
@@ -107,7 +107,7 @@
     return nil;
 }
 
-- (int)categoryAtIndexPath:(NSIndexPath*)indexPath {
+- (NSInteger)categoryAtIndexPath:(NSIndexPath*)indexPath {
     for ( NSNumber * key in self.cell2category ) {
         NSIndexPath * p = [self.cell2category objectForKey:key];
         if ( [p isEqual:indexPath] ) {
@@ -117,8 +117,8 @@
     return -1;
 }
 
-- (int)indexForCategory:(int)c {
-    NSNumber * k = [NSNumber numberWithInt:c];
+- (NSInteger)indexForCategory:(NSInteger)c {
+    NSNumber * k = [NSNumber numberWithInteger:c];
     NSIndexPath * p = [self.cell2category objectForKey:k];
     if ( p ) {
         return p.row;
@@ -127,7 +127,7 @@
     }
 }
 
-- (int)indexForData:(TableData*)data {
+- (NSInteger)indexForData:(TableData*)data {
     NSIndexPath * p = [self.cell2data objectForKey:data];
     if ( p ) {
         return p.row;
@@ -136,9 +136,9 @@
     }
 }
 
-- (int)totalRows {
-    int dataRows = [self.cell2data allKeys].count;
-    int cateRows =[self.cell2category allKeys].count;
+- (NSInteger)totalRows {
+    NSInteger dataRows = [self.cell2data allKeys].count;
+    NSInteger cateRows =[self.cell2category allKeys].count;
     return dataRows + cateRows;
 }
 

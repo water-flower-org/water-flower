@@ -14,13 +14,13 @@
 - (id)initWithCategories:(NSArray*)categories;
 - (BOOL)indexPathIsMaster:(NSIndexPath *)indexPath;
 - (BOOL)indexPathIsDetail:(NSIndexPath *)indexPath;
-- (void)addData:(TableData *)data forCategory:(int)category afterIndex:(NSIndexPath*)indexPath;
-- (void)rmData:(TableData*)data forCategory:(int)category atIndex:(NSIndexPath*)currentPath;
+- (void)addData:(TableData *)data forCategory:(NSInteger)category afterIndex:(NSIndexPath*)indexPath;
+- (void)rmData:(TableData*)data forCategory:(NSInteger)category atIndex:(NSIndexPath*)currentPath;
 - (TableData*)dataAtIndexPath:(NSIndexPath*)indexPath;
-- (int)categoryAtIndexPath:(NSIndexPath*)indexPath;
-- (int)indexForCategory:(int)c;
-- (int)indexForData:(TableData*)data;
-- (int)totalRows;
+- (NSInteger)categoryAtIndexPath:(NSIndexPath*)indexPath;
+- (NSInteger)indexForCategory:(NSInteger)c;
+- (NSInteger)indexForData:(TableData*)data;
+- (NSInteger)totalRows;
 
 // {(NSNumber*)category, (NSIndexPath*)path}
 @property NSMutableDictionary* cell2category;
